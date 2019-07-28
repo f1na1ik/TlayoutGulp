@@ -3,16 +3,18 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    del = require('del');
 
  gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.sass')
         .pipe(sass())
         //перенос строки. compressed - все в одну строку (для min.js)
         //expanded - дефолтный перенос (как все пишут обычный код)
+        .pipe(sass({outputStyle: 'expanded'}))
+        .pipe(gulp.dest('app/css'))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename({suffix: '.min'}))
-
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 });
@@ -22,11 +24,12 @@ var gulp = require('gulp'),
         .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('script', function () {
+ gulp.task('script', function () {
     return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({stream: true}))
 });
 
+//подключать библиотеки
 gulp.task('js',function () {
     return gulp.src(['node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
@@ -36,9 +39,15 @@ gulp.task('js',function () {
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({stream: true}))
 }) ;
- 
-//плагин для наблюдения. Если изменяется какой-то файл sass/scss, то
-//автоматом срабатывает команда sass
+
+// очищение dist
+gulp.task('clean', async function() {
+    return del.sync('dist');
+});
+
+
+//плагин для наблюдения. Если изменяется какой-то файл, то
+//автоматом срабатывает команда
 gulp.task('watch', function () {
     gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));
     gulp.watch('app/*.html', gulp.parallel('html'));
@@ -50,9 +59,26 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "app"
-        }
+        },
+        notify: false
     });
 });
 
-//что будем выполнять при написании gulp
-gulp.task('default', gulp.parallel('sass','js','browser-sync', 'watch'));
+//запуск
+gulp.task('default', gulp.parallel('html','sass','js','script','browser-sync', 'watch'));
+
+//собирает проект в dist
+gulp.task('prebuild', async function() {
+    var buildImg = gulp.src('app/img/**/*')
+        .pipe(gulp.dest('dist/img'));
+    var buildCss = gulp.src('app/css/*.css')
+        .pipe(gulp.dest('dist/css'));
+    var buildJs = gulp.src('app/js/*.js')
+        .pipe(gulp.dest('dist/js'));
+    var buildHtml = gulp.src('app/*.html')
+        .pipe(gulp.dest('dist'));
+    var buildFonts = gulp.src('app/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('build', gulp.series('clean', 'html', 'sass', 'script', 'js', 'prebuild'));
