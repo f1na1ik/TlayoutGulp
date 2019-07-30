@@ -31,8 +31,10 @@ var gulp = require('gulp'),
 
 //подключать библиотеки
 gulp.task('js',function () {
-    return gulp.src(['node_modules/slick-carousel/slick/slick.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+        // 'node_modules/slick-carousel/slick/slick.js',
+        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
