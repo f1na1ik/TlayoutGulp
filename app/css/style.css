@@ -135,6 +135,7 @@ h1, h2, h3, h4, h5, h6, p {
 .about {
   background-color: #fff;
   margin-top: 120px;
+  padding-bottom: 120px;
   text-align: center;
 }
 
@@ -154,4 +155,64 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 40px;
   font-size: 20px;
   margin-bottom: 15px;
+}
+
+.services {
+  padding-top: 170px;
+  text-align: center;
+  background-color: #e4fdf9;
+}
+
+.services__title {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.services__text {
+  line-height: 22px;
+  margin-bottom: 110px;
+}
+
+.services__our-card {
+  background-color: #ffffff;
+  padding: 60px 40px 45px;
+  transition: .5s;
+  margin-bottom: 30px;
+}
+
+.services__our-card:hover {
+  background-color: #00897b;
+  color: white;
+  box-shadow: 3px 3px 7px 2px rgba(0, 0, 0, 0.26);
+}
+
+.services__our-card:hover .services_button {
+  color: white;
+  border-color: white;
+}
+
+.services__our-card p {
+  padding-bottom: 43px;
+}
+
+.services_h3 {
+  font-family: "Open Sans Semibold", sans-serif;
+  margin-top: 22px;
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+
+.services_button {
+  padding: 7px 12px;
+  border: 2px solid black;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "Open Sans Semibold", sans-serif;
+  font-size: 20px;
+  transition: .5s;
+}
+
+.icon {
+  font-size: 43px;
 }
