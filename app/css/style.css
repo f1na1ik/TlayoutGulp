@@ -112,24 +112,13 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 10px 25px;
   margin: 0 10px;
   transition: .4s;
-}
-
-.button_empty {
   background: transparent;
   border: 2px solid white;
 }
 
-.button_empty:hover {
-  background-color: #0f6674;
-}
-
-.button_full {
+.button:hover {
   background-color: #00897b;
   border: 2px solid #00897b;
-}
-
-.button_full:hover {
-  background-color: #0f6674;
 }
 
 .about {
