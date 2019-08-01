@@ -131,6 +131,44 @@
             </div>
         </div>
     </section>
+<!---------------------------PORTFOLIO / LATEST WORKS-------------------------->
+<section class="portfolio">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h2 class="portfolio__title">Latest Works</h2>
+                <p class="portfolio__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="portfolio__filter">
+                    <button val="on" class="button" filter="all">All</button>
+                    <button val="off" class="button" filter="wd">Web design</button>
+                    <button val="off" class="button" filter="ud">Ui/Ux design</button>
+                    <button val="off" class="button" filter="moc">Mockups</button>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio_img row justify-content-center">
+            <!--с помощью val="on/off" отслеживаем кнопка уже нажата или нет (смотреть main.js). Если нажата - то повторные действия
+            производить не будем. Типо если мы выбрали Web design, то при повторном нажатии ничег не будет происходить-->
+            <div filter="ud" class="col-x1-4"><img src="img/item1.png" alt=""></div>
+            <div filter="ud" class="col-x1-4"><img src="img/item2.png" alt=""></div>
+            <div filter="moc" class="col-x1-4"><img src="img/item3.png" alt=""></div>
+            <div filter="wd" class="col-x1-4"><img src="img/item4.png" alt=""></div>
+            <div filter="wd" class="col-x1-4"><img src="img/item5.png" alt=""></div>
+            <div filter="moc" class="col-x1-4"><img src="img/item6.png" alt=""></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-x1-3">
+                <button class="button button_view-all ">
+                    view all
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 <!-------------------------FOOTER---------------------------------------------->
 
 <!------------------------JS, scripts------------------------------------------>

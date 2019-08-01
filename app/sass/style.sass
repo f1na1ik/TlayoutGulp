@@ -1,6 +1,6 @@
 @import "fonts"
 @import "vars"
-
+@import "media"
 *
   box-sizing: border-box
 body
@@ -68,9 +68,16 @@ h1,h2,h3,h4,h5,h6,p
   transition: .4s
   background: transparent
   border: 2px solid white
+  text-transform: uppercase
   &:hover
     background-color: #00897b
     border: 2px solid #00897b
+  &:active,
+  &:focus
+    outline: none
+.focused
+  background-color: #00897b
+  border: 2px solid #00897b
 //------------------------ABOUT US-----------------------------------------
 .about
   background-color: #fff
@@ -92,6 +99,7 @@ h1,h2,h3,h4,h5,h6,p
 //-------------------------OUT SERVICES-----------------------------------------
 .services
   padding-top: 170px
+  padding-bottom: 90px
   text-align: center
   background-color: #e4fdf9
   &__title
@@ -128,6 +136,34 @@ h1,h2,h3,h4,h5,h6,p
     font-family: $OSS
     font-size: 20px
     transition: .5s
+    &:active,
+    &:focus
+     outline: none
 
 .icon
   font-size: 43px
+//-------------------------PORTFOLIO / LATEST WORKS-----------------------------------------
+.portfolio
+  padding-top: 170px
+  padding-bottom: 90px
+  text-align: center
+  &__title
+    font-family: $OSB
+    font-size: 30px
+    margin-bottom: 20px
+  &__text
+    line-height: 22px
+    margin-bottom: 110px
+  &__filter
+    margin-bottom: 120px
+  img
+    margin-bottom: 30px
+    margin-right: 20px
+
+  .button
+    color: black
+    border-color: #00897b
+    &:hover
+      color: white
+    &_view-all
+      margin-top: 100px

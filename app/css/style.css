@@ -18,6 +18,12 @@
   src: url("../fonts/OpenSans-Semibold.ttf");
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -114,9 +120,19 @@ h1, h2, h3, h4, h5, h6, p {
   transition: .4s;
   background: transparent;
   border: 2px solid white;
+  text-transform: uppercase;
 }
 
 .button:hover {
+  background-color: #00897b;
+  border: 2px solid #00897b;
+}
+
+.button:active, .button:focus {
+  outline: none;
+}
+
+.focused {
   background-color: #00897b;
   border: 2px solid #00897b;
 }
@@ -148,6 +164,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .services {
   padding-top: 170px;
+  padding-bottom: 90px;
   text-align: center;
   background-color: #e4fdf9;
 }
@@ -202,6 +219,49 @@ h1, h2, h3, h4, h5, h6, p {
   transition: .5s;
 }
 
+.services_button:active, .services_button:focus {
+  outline: none;
+}
+
 .icon {
   font-size: 43px;
+}
+
+.portfolio {
+  padding-top: 170px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.portfolio__title {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.portfolio__text {
+  line-height: 22px;
+  margin-bottom: 110px;
+}
+
+.portfolio__filter {
+  margin-bottom: 120px;
+}
+
+.portfolio img {
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.portfolio .button {
+  color: black;
+  border-color: #00897b;
+}
+
+.portfolio .button:hover {
+  color: white;
+}
+
+.portfolio .button_view-all {
+  margin-top: 100px;
 }
