@@ -293,3 +293,51 @@ div[filter]:hover .text {
   z-index: 5;
   text-align: center;
 }
+
+.pricing {
+  background-color: #f0f1f1;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.pricing__title {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.pricing__text {
+  line-height: 22px;
+  margin-bottom: 110px;
+}
+
+.pricing__item_header {
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-image: url("../img/pricing_header.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 211px;
+}
+
+.pricing__item_header p {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.pricing__item_header sup {
+  font-size: 25px;
+  vertical-align: super;
+}
+
+.pricing__item_header sub {
+  font-size: 17px;
+  vertical-align: super;
+}
+
+.pricing__item_header_price {
+  font-size: 50px;
+  margin-right: -7px;
+}
