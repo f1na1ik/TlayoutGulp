@@ -191,6 +191,7 @@ div[filter]
   background-color: #f0f1f1
   text-align: center
   padding-top: 120px
+  padding-bottom: 30px
   &__title
     font-family: $OSB
     font-size: 30px
@@ -240,3 +241,42 @@ div[filter]
         &:hover
           color: white
 //------------------TEAM / OUT TEAM MEMBER----------------------------------
+.team
+  text-align: center
+  padding-top: 120px
+  &__title
+    font-family: $OSB
+    font-size: 30px
+    margin-bottom: 20px
+  &__text
+    line-height: 22px
+    margin-bottom: 110px
+  &__list
+    & h4
+      font-size: 20px
+      font-family: $OSS
+      margin-top: 30px
+      margin-bottom: 7px
+    & p
+      margin-bottom: 25px
+  &__icons
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    max-width: 295px
+    &_icon
+      & i:nth-child(1)
+        transition: .3s
+        color: #f0f1f1
+      & i:nth-child(2)
+        transition: .3s
+        color: #00897b
+      &:hover i:nth-child(1)
+        color: #3949ab
+      &:hover i:nth-child(2)
+        color: #ffffff
+
+  & .fa-stack
+    width: 1.8em
+    height: 1.9em
+

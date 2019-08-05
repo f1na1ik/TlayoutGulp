@@ -298,6 +298,7 @@ div[filter]:hover .text {
   background-color: #f0f1f1;
   text-align: center;
   padding-top: 120px;
+  padding-bottom: 30px;
 }
 
 .pricing__title {
@@ -374,4 +375,61 @@ div[filter]:hover .text {
 
 .pricing__item_footer button:hover {
   color: white;
+}
+
+.team {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.team__title {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.team__text {
+  line-height: 22px;
+  margin-bottom: 110px;
+}
+
+.team__list h4 {
+  font-size: 20px;
+  font-family: "Open Sans Semibold", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+.team__list p {
+  margin-bottom: 25px;
+}
+
+.team__icons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 295px;
+}
+
+.team__icons_icon i:nth-child(1) {
+  transition: .3s;
+  color: #f0f1f1;
+}
+
+.team__icons_icon i:nth-child(2) {
+  transition: .3s;
+  color: #00897b;
+}
+
+.team__icons_icon:hover i:nth-child(1) {
+  color: #3949ab;
+}
+
+.team__icons_icon:hover i:nth-child(2) {
+  color: #ffffff;
+}
+
+.team .fa-stack {
+  width: 1.8em;
+  height: 1.9em;
 }
