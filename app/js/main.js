@@ -83,8 +83,11 @@ $(document).ready(function () {
 
     $('.multiple-items').slick({
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        //у точек будет такой класс, чтоб мы его меняли
+        dotsClass: 'team__list_dots-style'
     });
 
 
