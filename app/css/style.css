@@ -461,3 +461,78 @@ div[filter]:hover .text {
   width: 1.8em;
   height: 1.9em;
 }
+
+.blog {
+  padding-top: 170px;
+  padding-bottom: 90px;
+  text-align: center;
+  background-color: #e4fdf9;
+}
+
+.blog__title {
+  font-family: "Open Sans Bold", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.blog__text {
+  line-height: 22px;
+  margin-bottom: 110px;
+}
+
+.blog__content_icon-text {
+  font-family: "Open Sans Semibold", sans-serif;
+  font-size: 17px;
+  line-height: 70px;
+}
+
+.blog__content_icon-text i {
+  margin-right: 13px;
+}
+
+.blog__content_icon-text:nth-child(1) {
+  margin-right: 35px;
+}
+
+.blog__content_text {
+  text-align: left;
+  margin-top: 60px;
+}
+
+.blog__content_text a {
+  color: #212121;
+  font-family: "Open Sans Semibold", sans-serif;
+  font-size: 25px;
+  transition: .3s;
+}
+
+.blog__content_text a:hover {
+  color: #00897b;
+  text-decoration: none;
+}
+
+.blog__content_text p {
+  font-family: "Open Sans Regular", sans-serif;
+}
+
+.right div:first-child {
+  order: 2;
+}
+
+.right div:last-child {
+  order: 1;
+}
+
+.button_more-view {
+  color: black;
+  border-color: #00897b;
+  margin-top: 120px;
+  width: 220px;
+  height: 70px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.button_more-view:hover {
+  color: white;
+}

@@ -297,3 +297,55 @@ div[filter]
     width: 1.8em
     height: 1.9em
 
+//------------------------BLOG-------------------------------
+.blog
+  padding-top: 170px
+  padding-bottom: 90px
+  text-align: center
+  background-color: #e4fdf9
+  &__title
+    font-family: $OSB
+    font-size: 30px
+    margin-bottom: 20px
+  &__text
+    line-height: 22px
+    margin-bottom: 110px
+  &__content
+    &_icon-text
+      font-family: $OSS
+      font-size: 17px
+      line-height: 70px
+      & i
+        margin-right: 13px
+      &:nth-child(1)
+        margin-right: 35px
+    &_text
+      text-align: left
+      margin-top: 60px
+      & a
+        color: #212121
+        font-family: $OSS
+        font-size: 25px
+        transition: .3s
+        &:hover
+          color: #00897b
+          text-decoration: none
+      & p
+        font-family: $OSR
+.right
+  & div:first-child
+    order: 2
+  & div:last-child
+    order: 1
+.button
+  &_more-view
+    color: black
+    border-color: #00897b
+    margin-top: 120px
+    width: 220px
+    height: 70px
+    font-weight: 500
+    font-size: 20px
+    &:hover
+      color: white
+
