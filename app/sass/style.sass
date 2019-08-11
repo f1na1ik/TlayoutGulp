@@ -19,7 +19,7 @@ ul, li
 h1,h2,h3,h4,h5,h6,p
   margin: 0
   padding: 0
-//-----------HEADER-NAVBAR
+//-----------HEADER-NAVBAR----------------------------
 .menu-bar
   padding: 45px 0
   .logo
@@ -421,4 +421,23 @@ div[filter]
     font-family: Roboto,sans-serif
     font-weight: 500
     min-height: 60px
-
+//-------------------------------------------------------------------------------------------------
+// Кнопочка вверх
+.toTop
+  z-index: 999
+  font-size: 25px
+  border: none
+  background-color: rgba(142, 141, 141, 0.2)
+  color: #8c8c8c
+  text-align: center
+  cursor: pointer
+  position: fixed
+  border-radius: 50%
+  bottom: 30px
+  right: 30px
+  height: 60px
+  width: 60px
+  display: none
+  & i
+    margin-top: 50%
+    transform: translateY(-60%)

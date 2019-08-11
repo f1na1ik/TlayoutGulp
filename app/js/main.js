@@ -87,9 +87,45 @@ $(document).ready(function () {
         slidesToScroll: 3,
         dots: true,
         //у точек будет такой класс, чтоб мы его меняли
-        dotsClass: 'team__list_dots-style'
+        dotsClass: 'team__list_dots-style',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            }]
     });
 
+// ------------------------------МЕНЮ МЕНЮ ----------------------------------------
+    $('ul.menu a[href^="#"]').click(function () {
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 650);
+        // -----------------нажатая ссылка подсвечивается-------
+        $('ul.menu a[href^="#"]').css({'color':'#212121'});
+        $(this).css({'color':'#004bee'});
+        //-------------------------------------------------
+        return false;
+    });
+// --------------------- КНОПОЧКА ПРОКРУТКИ ВВЕРХ----------------------------------
+    //-------появление при скорлле-----------
+    $(window).scroll(function () {
+        if ($(this).scrollTop() != 0)
+            $('.toTop').fadeIn();
+        else
+            $('.toTop').fadeOut()
+    });
+    //-------сам скролл-----------
+    $('.toTop').click(function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 800)
+    })
 
 
 });
