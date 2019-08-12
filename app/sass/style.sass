@@ -1,6 +1,5 @@
 @import "fonts"
 @import "vars"
-@import "media"
 *
   box-sizing: border-box
 body
@@ -20,10 +19,13 @@ h1,h2,h3,h4,h5,h6,p
   margin: 0
   padding: 0
 //-----------HEADER-NAVBAR----------------------------
+.menu-icon
+  display: none
 .menu-bar
   padding: 45px 0
   .logo
     width: 140px
+    height: 28px
 .menu__item
   & a
     font-size: 20px
@@ -441,3 +443,5 @@ div[filter]
   & i
     margin-top: 50%
     transform: translateY(-60%)
+
+@import "media"

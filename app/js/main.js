@@ -126,6 +126,20 @@ $(document).ready(function () {
             scrollTop: 0
         }, 800)
     })
-
-
+//-------------------ВЫПАДАЮЩЕЕ МЕНЮ ДЛЯ МОБИЛКИ--------------------------------------------------
+    $('.menu-icon').click(function () {
+        $('nav').slideToggle(500)
+        $('ul').css({
+            'display':'flex', 'flex-direction':'column'
+        });
+        $('.menu__item+.menu__item').css({
+            'margin-left':'unset'
+        })
+        if($('.menu-icon').html()=='<i class="fas fa-bars"></i>') {
+            $(this).html('<i class="fas fa-times"</i>')
+        }
+        else{
+            $(this).html('<i class="fas fa-bars"></i>')
+        }
+    })
 });
