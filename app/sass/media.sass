@@ -24,3 +24,30 @@
       &:active,
       &:focus
         outline: none
+
+@media screen and (max-width: 1200px)
+  .about
+    &__inner
+      justify-content: center !important
+      & div
+        margin-bottom: 60px
+  .portfolio
+    &_img
+      & img
+        max-width: 100%
+  div [filter]
+    margin-right: unset
+  .blog
+    &__content
+      &_text
+        margin-top: 15px
+      &_img
+        & img
+          max-width: 100%
+  .footer
+    &__icons
+      & + &
+        margin-left: unset
+        margin-top: 25px
+    input, textarea
+      margin-top: 30px

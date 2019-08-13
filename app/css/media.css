@@ -29,3 +29,31 @@
     outline: none;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .about__inner {
+    justify-content: center !important;
+  }
+  .about__inner div {
+    margin-bottom: 60px;
+  }
+  .portfolio_img img {
+    max-width: 100%;
+  }
+  div [filter] {
+    margin-right: unset;
+  }
+  .blog__content_text {
+    margin-top: 15px;
+  }
+  .blog__content_img img {
+    max-width: 100%;
+  }
+  .footer__icons + .footer__icons {
+    margin-left: unset;
+    margin-top: 25px;
+  }
+  .footer input, .footer textarea {
+    margin-top: 30px;
+  }
+}

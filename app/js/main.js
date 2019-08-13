@@ -134,7 +134,10 @@ $(document).ready(function () {
         });
         $('.menu__item+.menu__item').css({
             'margin-left':'unset'
-        })
+        });
+        $('.logo-bar').css({
+            'margin-bottom': '15px'
+        });
         if($('.menu-icon').html()=='<i class="fas fa-bars"></i>') {
             $(this).html('<i class="fas fa-times"</i>')
         }
