@@ -712,4 +712,73 @@ div[filter]:hover .text {
   .footer input, .footer textarea {
     margin-top: 30px;
   }
+  .team__list img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    min-height: unset;
+    padding: 12px;
+  }
+  .header__title {
+    font-size: 35px;
+  }
+  .header__text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .header .button {
+    margin-bottom: 15px;
+  }
+  .about,
+  .services,
+  .portfolio,
+  .pricing,
+  .team,
+  .blog,
+  .footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .about__text,
+  .services__text,
+  .portfolio__text,
+  .pricing__text,
+  .team__text,
+  .blog__text,
+  .footer__text {
+    margin-bottom: 30px;
+  }
+  .team__list img {
+    margin: 0 auto;
+  }
+  .team__list_dots-style {
+    margin-top: 20px;
+  }
+  .portfolio__filter {
+    margin-bottom: 30px;
+  }
+  .portfolio__filter button {
+    margin-bottom: 10px;
+  }
+  .pricing__item {
+    margin-bottom: 20px;
+  }
+  .left div:first-child {
+    order: 2;
+  }
+  .left div:last-child {
+    order: 1;
+  }
+  .blog__content_text {
+    margin-bottom: 15px;
+  }
+  .blog button {
+    margin-top: 35px;
+  }
 }

@@ -2,6 +2,7 @@
   .container
     max-width: 1170px
 
+
 @media screen and (max-width: 1024px)
   nav
     display: none
@@ -24,6 +25,7 @@
       &:active,
       &:focus
         outline: none
+
 
 @media screen and (max-width: 1200px)
   .about
@@ -51,3 +53,59 @@
         margin-top: 25px
     input, textarea
       margin-top: 30px
+  .team
+    &__list
+      img
+        margin: 0 auto
+        max-width: 100%
+
+
+@media screen and (max-width: 767px)
+  .header
+    min-height: unset
+    padding: 12px
+    &__title
+      font-size: 35px
+    &__text
+      font-size: 15px
+      margin-bottom: 20px
+    .button
+      margin-bottom: 15px
+  .about,
+  .services,
+  .portfolio,
+  .pricing,
+  .team,
+  .blog,
+  .footer
+    margin-top: 20px
+    margin-bottom: 20px
+    padding-bottom: 20px
+    padding-top: 20px
+    &__text
+      margin-bottom: 30px
+  .team
+    &__list
+      img
+        margin: 0 auto
+      &_dots-style
+        margin-top: 20px
+  .portfolio
+    &__filter
+      margin-bottom: 30px
+      button
+        margin-bottom: 10px
+  .pricing
+    &__item
+      margin-bottom: 20px
+  .left
+    & div:first-child
+      order: 2
+    & div:last-child
+      order: 1
+  .blog
+    &__content
+      &_text
+        margin-bottom: 15px
+    button
+      margin-top: 35px

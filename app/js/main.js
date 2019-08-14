@@ -97,6 +97,12 @@ $(document).ready(function () {
                     infinite: true,
                     dots: true
                 }
+            },{
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }]
     });
 
@@ -129,7 +135,7 @@ $(document).ready(function () {
 //-------------------ВЫПАДАЮЩЕЕ МЕНЮ ДЛЯ МОБИЛКИ--------------------------------------------------
     $('.menu-icon').click(function () {
         $('nav').slideToggle(500)
-        $('ul').css({
+        $('nav ul').css({
             'display':'flex', 'flex-direction':'column'
         });
         $('.menu__item+.menu__item').css({
