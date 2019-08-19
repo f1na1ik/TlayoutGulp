@@ -29,6 +29,19 @@ var gulp = require('gulp'),
         .pipe(browserSync.reload({stream: true}))
 });
 
+// библиотеки css
+gulp.task('css', function () {
+    return gulp.src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/slick-carousel/slick/slick-theme.css',
+    ])
+        .pipe(concat('_libs.sass'))
+        .pipe(gulp.dest('app/sass'))
+        .pipe(browserSync.reload({stream: true}))
+});
+
 //подключать библиотеки
 gulp.task('js',function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js',
@@ -67,7 +80,7 @@ gulp.task('browser-sync', function() {
 });
 
 //запуск
-gulp.task('default', gulp.parallel('html','sass','js','script','browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('html','css','sass','js','script','browser-sync', 'watch'));
 
 //собирает проект в dist
 gulp.task('prebuild', async function() {
@@ -83,4 +96,4 @@ gulp.task('prebuild', async function() {
         .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('build', gulp.series('clean', 'html', 'sass', 'script', 'js', 'prebuild'));
+gulp.task('build', gulp.series('clean', 'html', 'css', 'sass', 'script', 'js', 'prebuild'));
